@@ -1,6 +1,12 @@
-1. app.py is the http to https Restful proxy that gets the http Restful request from the upper stream monitoring platform. 
-Then transform the http request to https request and send the https restful requests to Tesla powerwall to get the status data. 
-Then the proxy sends back the status data to upper stream via http response.
+1. app.py is the http to https Restful proxy that gets the http Restful requests from the upper stream monitoring platform. 
+Then the proxy transforms the http requests to https requests and send the https restful requests to Tesla powerwall to get the status data. 
+Then the proxy sends back the status data to upper stream via restful http responses.
 
-2. 
+2. The app.py restful proxy is containerized by the docker. dockerfile is used for building the base image for the python proxy container
+and docker-compose.yml is used for deploy multiple instances of the https restful proxy.
+
+3. The Jenkinsfile is used for achieving the single click deployment for CD/CI purpose and for un-linux backgroud staff to do the quick 
+deployment.
+
+
 
