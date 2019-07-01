@@ -1,0 +1,5 @@
+1. app.py is the middleware that gets the powerwall status data via https then present the powerwall status data to dataminer via http.
+2. the reason having this middleware is dataminer driver can NOT doing the https get. it only can do http get. Powerwall only has https API.
+3. app.py get the restful API request from dataminer (every 60 seconds) and forward the request to the Powerwall. Then get the results from the powerwall (with 30 seconds timeout) and forward the results back to the dataminer.
+
+

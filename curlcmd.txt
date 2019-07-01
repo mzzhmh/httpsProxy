@@ -1,0 +1,12 @@
+GET:
+curl http://10.65.1.63:5000/incomes
+curl http://10.65.1.63:5000/incomes | python -m json.tool
+
+POST:
+curl -v -H "Content-Type: application/json" -X POST http://10.65.1.63:5000/incomes -d '{"amount":3000,"description":"line2"}'
+
+Powerwall APIs:
+curl -k https://10.49.9.220/api/meters/aggregates
+curl -k https://10.49.9.220/api/system_status/grid_status
+curl -k https://10.49.9.220/api/system_status/soe
+curl -k https://10.49.9.220/api/sitemaster

@@ -1,0 +1,7 @@
+ 1086  docker-compose down
+ 1087  ls -lrt
+ 1088  cd -
+ 1089  docker-compose down
+ 1090  docker-compose build
+ 1091  docker-compose up -d
+
