@@ -1,4 +1,6 @@
-1. app.py is the http to https Restful proxy that gets the http Restful request from the upper stream monitoring platform. Then transform the http request to https request and send the https restful requests to Tesla powerwall to get the status data. Then the proxy sends back the status data to upper stream via http response.
+1. app.py is the http to https Restful proxy that gets the http Restful request from the upper stream monitoring platform. 
+Then transform the http request to https request and send the https restful requests to Tesla powerwall to get the status data. 
+Then the proxy sends back the status data to upper stream via http response.
 
 2. 
 
