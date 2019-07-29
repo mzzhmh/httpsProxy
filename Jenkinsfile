@@ -5,7 +5,7 @@ node
         }
 	stage('build image') {
 	    sh "docker pull mzzhmh/httpsproxy:latest"
-	    docker.build("mzzhmh/httpsproxy:latest")
+	    docker.build("mzzhmh/httpsproxy:latest .")
         }
 //	stage('stop previous compose') {
 //	    sh "docker-compose down"

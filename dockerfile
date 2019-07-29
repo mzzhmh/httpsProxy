@@ -1,4 +1,4 @@
-FROM mzzhmh/httpsproxy
+FROM mzzhmh/httpsproxy:latest
 
 COPY curlcmd.txt /opt/httpsProxy/
 COPY README /opt/httpsProxy/
