@@ -4,13 +4,14 @@ node
 	    checkout scm
         }
 	stage('build image') {
-	    sh "docker build -t pythonserverrun:latest ."
+	    sh "docker pull mzzhmh/httpsproxy:latest"
+	    docker.build("mzzhmh/httpsproxy")
         }
-	stage('stop previous compose') {
-	    sh "docker-compose down"
-        }
-        stage('Deploy compose') {
-            sh "docker-compose up -d"
-        }
+#	stage('stop previous compose') {
+#	    sh "docker-compose down"
+#        }
+#        stage('Deploy compose') {
+#            sh "docker-compose up -d"
+#        }
 }
 

@@ -1,14 +1,12 @@
-FROM pythonserver:latest
+FROM mzzhmh/httpsproxy
 
-COPY curlcmd.txt /opt/restfulPowerwall/
-COPY README /opt/restfulPowerwall/
-COPY aggregates.txt /opt/restfulPowerwall/
-COPY powerwall.txt /opt/restfulPowerwall/
-COPY app.py /opt/restfulPowerwall/
-COPY spawnProxies.sh /opt/restfulPowerwall/
+COPY curlcmd.txt /opt/httpsProxy/
+COPY README /opt/httpsProxy/
+COPY app.py /opt/httpsProxy/
+COPY spawnProxies.sh /opt/httpsProxy/
 
 VOLUME ["/var/log/powerwall/"]
 
-WORKDIR /opt/restfulPowerwall/
+WORKDIR /opt/httpsProxy/
 
-#CMD ["/usr/bin/bash","-c","/opt/restfulPowerwall/app.py 10.49.9.220 3080 &>/var/log/powerwall/3080_log"]
+#CMD ["/usr/bin/bash","-c","/opt/httpsProxy/app.py 10.49.9.220 3080 &>/var/log/powerwall/3080_log"]
