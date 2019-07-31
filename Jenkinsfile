@@ -12,11 +12,11 @@ node
 	stage('cleanup old docker images') {
 	    sh "./purgeDangLing.sh"
 	}
-//	stage('Push new image to docker hub'){
-//	    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-cred') {
-//            custImg.push("latest")
-//            }
-//	}
+	stage('Push new image to docker hub'){
+	    docker.withRegistry('https://registry.hub.docker.com', 'dockerKey') {
+            custImg.push("latest")
+            }
+	}
 //	stage('stop previous compose') {
 //	    sh "docker-compose down"
 //        }
