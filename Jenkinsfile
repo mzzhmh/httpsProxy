@@ -7,6 +7,9 @@ node
 	    sh "docker pull mzzhmh/httpsproxy:latest"
 	    sh "docker build --file dockerfile -t mzzhmh/httpsproxy:latest ."
         }
+	stage('cleanup old docker images') {
+	    sh "./purgeDangLing.sh"
+	}
 //	stage('stop previous compose') {
 //	    sh "docker-compose down"
 //        }
