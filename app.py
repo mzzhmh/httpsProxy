@@ -133,4 +133,4 @@ def get_soe():
 
 
 if __name__ == '__main__':
-    app.run(host='10.236.76.132',port=Siteport)
+    app.run(host='127.0.0.1',port=Siteport)

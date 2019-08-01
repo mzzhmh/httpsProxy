@@ -17,11 +17,11 @@ node
             custImg.push("latest")
             }
 	}
-//	stage('stop previous compose') {
-//	    sh "docker-compose down"
-//        }
-//        stage('Deploy compose') {
-//            sh "docker-compose up -d"
-//        }
+	stage('stop previous compose') {
+	    sh "docker-compose down"
+        }
+        stage('Deploy compose') {
+            sh "docker-compose up -d"
+        }
 }
 

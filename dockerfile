@@ -4,6 +4,7 @@ COPY curlcmd.txt /opt/httpsProxy/
 COPY README /opt/httpsProxy/
 COPY app.py /opt/httpsProxy/
 COPY spawnProxies.sh /opt/httpsProxy/
+RUN chmod 775 /opt/httpsProxy/app.py
 
 VOLUME ["/var/log/powerwall/"]
 
