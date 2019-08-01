@@ -17,10 +17,7 @@ aggregateURL="https://"+IP+"/api/meters/aggregates"
 soeURL="https://"+IP+"/api/system_status/soe"
 gridStatusURL="https://"+IP+"/api/system_status/grid_status"
 siteMasterURL="https://"+IP+"/api/sitemaster"
-
 app = Flask(__name__)
-
-
 @app.route('/aggregates')
 def get_aggregates():
   print("\n1############# GET aggregates REQUEST ###########",file=sys.stderr)
