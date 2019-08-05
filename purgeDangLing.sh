@@ -8,7 +8,7 @@ else
         for word in $danglingImg
         do
                 printf "Removing $word\n"
-                cmd="docker image rm $word"
+                cmd="docker image rm $word -f"
                 echo $cmd
                 $cmd
         done
@@ -23,7 +23,7 @@ else
         for word2 in $danglingImg2
         do
                 printf "Removing $word2\n"
-                cmd2="docker image rm $word2"
+                cmd2="docker image rm $word2 -f"
                 echo $cmd2
                 $cmd2
         done
