@@ -127,7 +127,5 @@ def get_soe():
     sys.stdout.flush()
     return Response(ret,status=200)
   print("############## END soe REQUEST ###########\n",file=sys.stderr)
-
-
 if __name__ == '__main__':
     app.run(host='127.0.0.1',port=Siteport)
